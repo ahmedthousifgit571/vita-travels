@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    /* Safe Light Theme - Earthy & Airy */
+    --background: 60 20% 98%; /* Creamy white */
+    --foreground: 20 14.3% 4.1%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+ 
+    --primary: 155 30% 35%; /* Deep nature green */
+    --primary-foreground: 60 9.1% 97.8%;
+ 
+    --secondary: 30 20% 90%; /* Soft Sand */
+    --secondary-foreground: 24 9.8% 10%;
+ 
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+ 
+    --accent: 60 4.8% 95.9%;
+    --accent-foreground: 24 9.8% 10%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+ 
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 155 30% 35%;
+ 
+    --radius: 1rem;
+  }
+ 
+  .dark {
+    /* Deep Dark Theme - Night Sky & Campfire */
+    --background: 200 15% 10%; /* Very dark slate */
+    --foreground: 60 9.1% 97.8%;
+ 
+    --card: 200 15% 12%;
+    --card-foreground: 60 9.1% 97.8%;
+ 
+    --popover: 200 15% 12%;
+    --popover-foreground: 60 9.1% 97.8%;
+ 
+    --primary: 155 40% 50%; /* Lighter green for dark mode */
+    --primary-foreground: 144 100% 10%;
+ 
+    --secondary: 200 15% 18%;
+    --secondary-foreground: 60 9.1% 97.8%;
+ 
+    --muted: 200 15% 18%;
+    --muted-foreground: 200 5% 60%;
+ 
+    --accent: 200 15% 18%;
+    --accent-foreground: 60 9.1% 97.8%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+ 
+    --border: 200 15% 18%;
+    --input: 200 15% 18%;
+    --ring: 155 40% 50%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/30 rounded-full hover:bg-muted-foreground/50;
+}
+
+html {
+  scroll-behavior: smooth;
+}
